@@ -1,0 +1,170 @@
+/* v1.0 | 20080212 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* End reset */
+
+body {
+	font-family: Helvetica, Verdana, Arial, sans-serif;
+	line-height: 1.2em;
+}
+
+p {
+  margin-top: 1em;
+  font-size: 0.9em;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h2 {
+  margin-top: 1.5em;
+  padding-bottom: 2px;
+  font-family: Georgia, Times, serif;
+  color: gray;
+  font-size: 1.5em;
+  border-bottom: 1px dotted gray;
+}
+
+div#container,
+div#header,
+div#footer {
+	width: 600px;
+	margin: 0 auto;
+	margin-bottom: 1em;
+}
+
+div#header h1 {
+  font-family: Helvetica, Verdana, Arial, sans-serif;
+  margin-top: 1em;
+  margin-left: -5px;
+  font-size: 4em;
+  color: black;
+}
+
+div#header h1 > span {
+  color: red;
+}
+
+div#header {
+  border-bottom: 1px solid red;
+}
+
+div#footer {
+  border-top: 1px solid red;
+}
+
+div#header p,
+div#footer p {
+  font-size: 0.6em;
+  color: gray;  
+}
+
+div#header p > a,
+div#footer p > a {
+  color: red;
+  font-weight: normal;
+}
+
+div.tweet {
+	clear: both;
+	margin: 10px 0px;
+	border-bottom: 1px dotted gray;
+	min-height: 58px;
+	padding-bottom: 2px;
+}
+
+a.external {
+  color: #1E90FF;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+span.detail {
+	font-size: 0.8em;
+	font-family: Georgia, Times, serif;
+	font-style: italic;
+	color: gray;
+}
+
+span.from {
+	font-weight: bold;
+}
+
+span.from a {
+  color: green;
+}
+
+a.name,
+span.tag {
+  font-size: 0.9em;
+  font-weight: bold;
+  color: red;
+}
+
+img.profile_image {
+	float: left;
+	width: 48px;
+	height: 48px;
+	border: 1px solid black;
+	margin-right: 5px;
+}
+
+div#pagination a.next_page,
+div#pagination span.next_page{
+  float: right;
+}

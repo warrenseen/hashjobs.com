@@ -1,0 +1,22 @@
+<% if !@results.blank? %>
+  <% for item in @results %>
+<div class="tweet">
+  <a target="_blank" href="<%= twitter_url_for(item.from_user,item.id) %>">
+	<img src="<%= item.profile_image_url %>" alt="<%= item.from_user %>" class="profile_image" />
+	</a>
+	<%= format_text(item.text) %>
+	<span class="detail">
+	  <span class="created_at"><%= time_ago_in_words(item.created_at) %></span> ago from <span class="from">
+	    <a target="_blank" href="<%= twitter_url_for(item.from_user,item.id) %>"><%= item.from_user %></a>
+    </span>
+  </span>
+</div>  
+  <% end %>
+<% else %>
+  <h2>No tweets found!</h2>
+  <p>Sometimes this just happens. Try refreshing the page.</p>
+<% end %>
+<div id="pagination" class="pagination">
+  <%= render_pagination(@page, @is_first_page, @is_last_page) %>
+</div>
+		
