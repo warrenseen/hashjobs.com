@@ -1,0 +1,20 @@
+username: 
+password: 
+lang: en
+per_page: 20
+update_interval: 300
+terms:
+  - '#job'
+  - '#jobpost'
+  - '#NAJ'
+  - '#HAJ'
+  - '#employment'
+  - '#recruiting'
+  - '#hiring'
+  - '#rtjob'
+  - '#career'
+  - '#staffing'
+  - 'naj'
+  - 'haj'
+  - 'hiring'
+
