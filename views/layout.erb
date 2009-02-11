@@ -10,6 +10,8 @@
 		<meta name="viewport" content="initial-scale = 1.0" /> 
 		<link rel="stylesheet" href="/css/iphone.css" type="text/css" media="screen" title="no title" charset="utf-8">
 		<% end %>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js" type="text/javascript"></script> <script type="text/javascript">$(document).ready(function(){});</script>
+		<script type="text/javascript" src="http://www.longurlplease.com/js/longurlplease.js"></script>
 	</head>
 	<body>
 	  <div id="header"><a href="/"><h1>Hash<span>#</span>Jobs</h1></a><br/>
@@ -18,14 +20,15 @@
 	  <div id="container"><%= yield %></div>
 	  <div id="footer"><p>&copy; 2009. a flight of fancy by <a target="_blank" href="http://warrenseen.com">warren seen</a>.</p></div>	
 	  <script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-var pageTracker = _gat._getTracker("UA-4271677-2");
-pageTracker._trackPageview();
-} catch(err) {}
-      </script>
+	  $.longurlplease();
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    try {
+    var pageTracker = _gat._getTracker("UA-4271677-2");
+    pageTracker._trackPageview();
+    } catch(err) {}
+    </script>
 	</body>
 </html>

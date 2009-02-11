@@ -1,8 +1,10 @@
-require 'rubygems'
 require 'twitter'
 require 'activesupport'
 require 'action_view'
+require 'classifier'
+require 'madeleine'
 require 'sinatra'
+require 'yaml'
 
 helpers do
   include ActionView::Helpers::DateHelper
@@ -107,13 +109,14 @@ get '/' do
 end
 
 configure do
-  Cache = []
-  Terms = ['#job','#jobpost', '#NAJ', '#HAJ', '#employment', '#recruiting', '#hiring', 'naj', 'haj', 'hiring' ]
-  Lang = 'en'
-  PerPage = 20
-  UpdateInterval = 300 # hasn't been updated for 5 mins. - 300 secs
-  Search =  Twitter::Search.new(Terms.join(' OR ')).lang(Lang).per_page(PerPage)
+  Config = YAML.load_file("config.yaml")
   
+  Cache = []
+  UpdateInterval = Config['update_interval']
+  Search = Twitter::Search.new(Config['terms'].join(' OR ')).lang(Config['lang']).per_page(Config['per_page'])
+  Maddy = SnapshotMadeleine.new("bayes_data") do
+    Classifier::Bayes.new 'HAJ','NAJ','Noise'
+  end
   $last_updated = Time.now - UpdateInterval # ensure the first request is outdated.
 end
   
