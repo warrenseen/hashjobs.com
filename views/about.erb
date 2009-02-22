@@ -4,7 +4,7 @@
 <p>I'm just your average freelance developer guy who dabbles in Ruby. You can find me on twitter as <%= twitter_link_to('warren_s') %>.</p><p><strong>I'm looking for new projects, so if you like what you see, and have something that needs building, you can hire me.</strong> DM me or see my <%= link_to 'blog', 'http://warrenseen.com', :target => '_blank', :class => 'external' %> for more details.</p>
 <h2>How it works</h2>
 <p><strong>Hash<span style="color:red">#</span>Jobs</strong> aggregates tweets that contain the following tags from twitter:<br/>
-	<span class="tag"><%= Terms.join(', ') %></span><br/>
+	<span class="tag"><%= Config['terms'].join(', ') %></span><br/>
 	If you want your tweet to appear here, simply add one of those tags.</p>
 <p>Some day, in the future, <strong>Hash<span style="color:red">#</span>Jobs</strong> might be smarter, through the wonders of bayesian classifiers and other cool things like text clustering. No promises.</p>
 <h2>What it's made with</h2>
