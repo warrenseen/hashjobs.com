@@ -1,0 +1,7 @@
+username: 
+password: 
+lang: en
+per_page: 20
+update_interval: 300
+terms:
+  - '#jobs'

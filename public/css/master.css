@@ -89,14 +89,19 @@ div#footer {
 }
 
 div#header h1 {
-  font-family: Helvetica, Verdana, Arial, sans-serif;
   margin-top: 1em;
   margin-left: -5px;
   font-size: 4em;
+}
+div#header h1 a {
+  font-family: Helvetica, Verdana, Arial, sans-serif;
   color: black;
 }
+div#header h1 a:hover {
+  text-decoration: none;
+}
 
-div#header h1 > span {
+div#header h1 a > span {
   color: red;
 }
 

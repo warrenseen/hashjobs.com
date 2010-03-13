@@ -1,7 +1,7 @@
 require 'sinatra'
 
 disable :run
-set :environment, ENV['RACK_ENV'] || :development
+#set :environment, ENV['RACK_ENV'] || :development
 
  #log = File.new("./log/sinatra.log", "a")
  #error_log = File.new("./log/error.log", "a")
